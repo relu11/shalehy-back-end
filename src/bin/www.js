@@ -5,6 +5,7 @@
 import debug from "debug";
 import http from "http";
 import app from "../app";
+import chalk from "chalk";
 /**
  * Normalize a port into a number, string, or false.
  */
@@ -70,3 +71,4 @@ const onListening = () => {
 server.listen(port);
 server.on("error", onError);
 server.on("listening", onListening);
+console.log(chalk.green(`URL: http://localhost:${port}/`));
